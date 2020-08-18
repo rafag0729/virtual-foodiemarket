@@ -1,10 +1,3 @@
-<?php
-/*
-    require_once 'actions/conexion.php';
-    require_once 'actions/helpful-functions.php';
- */
-?>
-
 <!DOCTYPE html>
 <html lang="es">
       <head>
