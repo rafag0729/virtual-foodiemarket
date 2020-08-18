@@ -14,7 +14,7 @@
 }
 
 ::selection {
-  background-color: rgb(24, 255, 0);;
+  background-color: rgb(24, 255, 0);
   color: white;
 }
 
@@ -69,6 +69,16 @@ section {
   background-color: #ff1a00ff;
   color: white;
 }
+
+.error-msj-php {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #ff1a00ff;
+  color: white;
+}
+
 
 /* IS STILL GENERAL, BUT SEPARATED SECTION FOR ALL THE FORMS */
 form {
@@ -184,7 +194,23 @@ nav {
   transition-timing-function: cubic-bezier(0, 0, .58, 1);
 }
 
+/* .cart-icon::after {
+  content: '';
+  font-size: 0.9rem;
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: #ff005eff;
+  color: white;
+} */
+
 .cart-icon {
+  position: relative;
   margin-bottom: 0;
   background-color: #0b7a00ff;
   cursor: pointer;
@@ -254,13 +280,19 @@ nav {
   max-width: 300px;
 }
 
-.arma-tu-combo small {
+/* .arma-tu-combo small {
   color: #18ff00ff;
   margin-left: 10px;
-}
+} */
 
 .small-printATC i {
   color: #0b7a00ff;
+}
+
+.small-printATC small {
+  font-size: 0.9rem;
+  color: #18ff00ff;
+  margin-left: 10px;
 }
 
 #atc-btn {
@@ -400,6 +432,10 @@ nav {
 
 #formulario-compra .direccion  {
   flex-grow: 3;
+}
+
+#formulario-compra input[name="email"]{
+  width: 80%;
 }
 
 #formulario-compra input[name="direccion"]{
