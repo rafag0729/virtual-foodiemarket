@@ -39,6 +39,7 @@ function armaTuComboLista(js_obj){
 
   const UL_ATC = document.querySelector("#arma-tu-combo ul");
 
+  //Crear los elementos de la lista en el carrito
   function creatingElements(lista, index) {
     //Crear un input con type checkbox, name con index, value con el nombe de articulo, con content nombre del articulo
     let text = document.createTextNode(lista[index][1].articulo);
@@ -60,7 +61,7 @@ function armaTuComboLista(js_obj){
   }
 
   var lista_array = Object.entries(js_obj);
-
+  //Con esta funcion, se crearan los 3 divs en los que se distribuira 3 sets de articulos del carrito
   function splittingDivs(lista, min, max){
     var div = document.createElement("div");
     for(var i = min; i >= min && i <= max; i++){
@@ -68,7 +69,8 @@ function armaTuComboLista(js_obj){
     }
     return div;
   }
-
+  //Con esta funcion se llaman las funciones para crear los articulos items y despues meterlos en 3 secciones, que serviran para
+  //el flexbox de la página
   UL_ATC.append(splittingDivs(lista_array, 0, 8));
   UL_ATC.append(splittingDivs(lista_array, 9, 17));
   UL_ATC.append(splittingDivs(lista_array, 18, 24));
@@ -78,7 +80,8 @@ function armaTuComboLista(js_obj){
 //VALIDATING CART ARTICLES
 
 const ATC_FORM = document.querySelector("#arma-tu-combo");
-
+//Con esta funcion, se validan el arma tu combo personalizado, asegurandose que los input que estan checked cumplen las condiciones
+//de estar entre 7 y 15. Si no es asi, se crea el error y se muestra en la páina
 function validatingCartATC(){
 
   var inputs = Array.from(document.querySelectorAll("#arma-tu-combo input:checked"));
@@ -101,7 +104,8 @@ function validatingCartATC(){
 
 }
 
-//savingItemsLS necesita un array de los elementos checked, tambien el legend de cada uno de sus forms, y que cada form llame este evento
+//savingItemsLS necesita un array de los elementos checked, tambien el legend de cada uno de sus forms,
+//y que cada form llame este evento
 function savingItemsLS(baseE, products, precio){
 
   var legend = baseE.querySelector("legend").innerHTML;
@@ -120,10 +124,7 @@ function savingItemsLS(baseE, products, precio){
       if(precio){
         localStorage.setItem("precio", costo)
       }
-
-
     }
-
   } else {
     localStorage.setItem("productsSaved", stringItems);
     localStorage.setItem("title", legend);
