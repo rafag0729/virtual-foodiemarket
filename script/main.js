@@ -25,24 +25,49 @@ var atc_lista = [
   {articulo: "1 Paquete Pastas la Muñeca (250gr)", precio: 1814},
   {articulo: "1 Paquete harina pan - arepas (1kg)", precio: 4264},
   {articulo: "1 Leche en polvo El Rodeo (200gr)", precio: 6162},
-  {articulo: "1 Bolsa Nesquik (220gr)", precio: 4506}
+  {articulo: "1 Nesquik (220gr)", precio: 4506}
 ]
 
+/* --------------- scripts for all the pag es---------------------- */
+
+var globalStyleSheet = document.styleSheets[0];
+
+if(localStorage.getItem("productsSaved")){
+  globalStyleSheet.insertRule(`.cart-icon::after {
+    content: '';
+    font-size: 0.9rem;
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: #ff005eff;
+    color: white;
+  }`, globalStyleSheet.cssRules.length);
+} 
+
+//Ahora debemos mirar que cuando haya elementos en el local storage, lo añada. Si no lo hay, se cersiore de eliminarlo
+
+
+// menu bar
+
+Index.MENU_BTN.addEventListener("click", function() {
+    Index.showingMenu();
+})
+
+Index.CLOSE_BTN.addEventListener("click", function() {
+    Index.hiddingMenu();
+})
 
 /* --------------- scripts for index.php---------------------- */
 
 var page = window.location.href;
-if(page.includes("index.php") || !page.includes("carrito.php")){
 
-  // menu bar
+if(page.includes("index.php") && !page.includes("carrito.php") && !page.includes("formulario.php")){
 
-  Index.MENU_BTN.addEventListener("click", function() {
-      Index.showingMenu();
-  })
-
-  Index.CLOSE_BTN.addEventListener("click", function() {
-      Index.hiddingMenu();
-  })
 
   // downArrow
   Index.DOWN_ARROW.addEventListener("click", function() {
@@ -55,7 +80,7 @@ if(page.includes("index.php") || !page.includes("carrito.php")){
 
   // validating the cart list passed
   Index.ATC_FORM.addEventListener("submit", () => {
-    // e.preventDefault();
+
     Index.savingItemsLS(Index.ATC_FORM, Index.validatingCartATC());
   })
   // Como argumento para savingItemsLS, se necesita un array de elementos, tambien seleccionar correctamente el legend dentro del form
@@ -64,8 +89,6 @@ if(page.includes("index.php") || !page.includes("carrito.php")){
   combos.forEach(item => {
 
       item.addEventListener("submit", () => {
-
-
         /*
         1. Sacar los values de cada uno de los combos y meterlos en un array
         2. Crear elemento base VV
@@ -95,7 +118,7 @@ import * as Index from './index.js';
 /*---------------------------------------*/
 
 if(page.includes("carrito.php")){
-  // console.log(typeof atc_lista);
+
   Cart.creatingWholeCart(atc_lista);
 
   Cart.RST_BTN.addEventListener("click", () => {
@@ -106,3 +129,18 @@ if(page.includes("carrito.php")){
 }
 // IMPORTING FUNCTIONS AND OBJECTS FROM INDEX.JS
 import * as Cart from './carrito.js';
+
+/*---------------------------------------*/
+
+//Script for confirmation.php
+
+if(page.includes("confirmacion.php")){
+  var orderNumber = document.querySelector("#order-number").innerHTML;
+  var pattern = new RegExp('^[0-9]{6}$');
+
+  if(pattern.test(orderNumber.trim())){
+    //Con esta funcion, se borra toda la informacion del local storage cuando la orden arroja un numero de orden
+    localStorage.clear();
+  }
+
+}
