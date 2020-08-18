@@ -1,4 +1,5 @@
 <?php
+    require_once 'actions/conexion.php';
     require_once 'includes/header.php';
 ?>
 
@@ -23,12 +24,17 @@
 
           <div>
             <label for="celular">NÚMERO CELULAR </label>
-            <input type="tel" name="celular" required pattern="\d{10}">
+            <input type="tel" name="celular" title="Por favor agrega un número celular correcto de 10 digitos" required pattern="\d{10}">
           </div>
 
           <div>
             <input type="checkbox" name="wpp" checked>
             <label for="wpp">AUTORIZA CONTACTO POR WHATSAPP </label>
+          </div>
+
+          <div class="email">
+            <label for="email">CORREO ELECTRONICO </label>
+            <input type="email" name="email" required>
           </div>
 
           <div class="direccion">
@@ -48,9 +54,21 @@
           </div>
 
           <div class="date">
-            <label for="date">DÍA Y HORA DE LLEGADA DEL PEDIDO </label>
-            <input type="datetime-local" name="date">
+            <label for="fechaEntrega">DÍA DE LLEGADA DEL PEDIDO </label>
+            <input type="date" name="fechaEntrega">
+            <div class="small-printATC">
+                <i class="fas fa-check-square"></i><small>De no seleccionar una fecha, el pedido será agendado para entregar el día siguiente </small>
+            </div>
           </div>
+            
+          <?php if(isset($_SESSION['error']['fecha'])):?>
+              <div class="error-msj-php"><?=$_SESSION['error']['fecha']?></div>
+              
+          <?php 
+                $_SESSION['error']['fecha'] = null;
+                endif; 
+          ?>
+
         </form>
 
       <div class="carrito-btn">
