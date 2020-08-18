@@ -1,4 +1,5 @@
 <?php
+    require_once 'actions/conexion.php';
     require_once 'includes/header.php';
 ?>
 
@@ -17,7 +18,11 @@
 
           <button class="reiniciar-btn" type="button">Empezar compra</button>
           <div class="error-msj"></div>
-
+          <?php if(isset($_SESSION['error-cart'])):
+                echo "<div class='error-msj-php'>".$_SESSION['error-cart']."</div>";
+                session_unset();
+              endif;
+          ?>
           <ul>
             <!--Incrustar los elementos añadidos que estan en el local storage -->
           </ul>
