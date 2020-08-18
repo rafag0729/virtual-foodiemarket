@@ -9,6 +9,7 @@ function creatingWholeCart(objectList, costo){
 
     //Este es el codigo en caso de que hayan elementos en el local Storage para añadir al carrito
     var itemsCart = localStorage.getItem("productsSaved").split(",");
+
     const UL_FORM = document.querySelector("#carrito-form ul");
 
     var costoTotal = 0;
@@ -25,7 +26,6 @@ function creatingWholeCart(objectList, costo){
             input.setAttribute("type", "hidden");
             input.setAttribute("name", "art"+i);
             input.setAttribute("checked", "checked");
-            // input.setAttribute("readonly", "readonly");
             input.setAttribute("value", objectList[i].articulo);
 
             // Incrustar el input de arriba dentro de un label
@@ -40,7 +40,7 @@ function creatingWholeCart(objectList, costo){
 
             return UL_FORM;
         }
-        console.log("Hey, there");
+
         costoTotal += objectList[i].precio;
         creatingElementsForm();
       }
@@ -63,7 +63,7 @@ function creatingWholeCart(objectList, costo){
       }
 
       var numbText = Number(text_op.slice(1) * 1000);
-      
+
       INP_HID.value = numbText;
       return OP_FORM.append(text_op);
     }
