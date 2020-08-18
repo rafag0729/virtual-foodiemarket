@@ -2,7 +2,6 @@
     require_once 'includes/header.php';
     require_once 'includes/banner.php';
 ?>
-
             <div class="content-wrap"> <!--Main content-->
               <section class="arma-tu-combo"> <!--ARMA TU COMBO-->
                 <div class="heading-img">
@@ -30,7 +29,6 @@
                         <legend>COMBO PERSONALIZADO</legend>
 
                         <ul>
-
                             <!-- Aca se encuentra el JSON object con la lista de cada uno de los items y sus precios -->
                         </ul>
                         <div id="atc-btn">
@@ -52,11 +50,11 @@
                         <ul>
                           <li><label><input type="checkbox" checked disabled value="1 Panal de huevos AAA">1 Panal de huevos AAA</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Pollo campesino">1 Pollo campesino</label></li>
-                          <li><label><input type="checkbox" checked disabled value="1 Paquete de arepas (6 uds)">1 Paquete de arepas (6 uds)</label></li>
+                          <li><label><input type="checkbox" checked disabled value="1 Paquete arepas de queso (6 uds)">1 Paquete de arepas (6 uds)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Paquete de arepas de chocolo (5 uds)">1 Paquete de arepas de chocolo (5 uds)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Libra de queso cuajada">1 Libra de queso cuajada</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Paquete de jamón sandwich">1 Paquete de jamón sandwich</label></li>
-                          <li><label><input type="checkbox" checked disabled value="1 Paquete de chorizos artesano">1 Paquete de chorizos artesano</label></li>
+                          <li><label><input type="checkbox" checked disabled value="1 Paquete de chorizo artesano">1 Paquete de chorizos artesano</label></li>
                         </ul>
                         <output>$80.000</output>
                         <button type="submit">Añadir al carrito</button>
@@ -115,7 +113,7 @@
                           <li><label><input type="checkbox" checked disabled value="1 Leche en polvo El Rodeo (200gr)">1 Leche en polvo El Rodeo (200gr)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Paquete caldo Maggi (8 uds)">1 Paquete caldo Maggi (8 uds)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Botella aceite Z (900ml)">1 Botella aceite Z (900ml)</label></li>
-                          <li><label><input type="checkbox" checked disabled value="1 Paquete Nesquik (220gr)">1 Paquete Nesquik (220gr)</label></li>
+                          <li><label><input type="checkbox" checked disabled value="1 Nesquik (220gr)">1 Paquete Nesquik (220gr)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Lata de atún Isabel en aceite (142gr)">1 Lata de atún Isabel en aceite (142gr)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Paquete harina pan - arepas (1kg)">1 Paquete harina pan - arepas (1kg)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Lata de arvejas con zanahoria">1 Lata de arvejas con zanahoria</label></li>
@@ -133,7 +131,7 @@
                           <li><label><input type="checkbox" checked disabled value="1 Leche en polvo El Rodeo (200gr)">1 Leche en polvo El Rodeo (200gr)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Paquete caldo Maggi (8 uds)">1 Paquete caldo Maggi (8 uds)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Botella aceite Z (900ml)">1 Botella aceite Z (900ml)</label></li>
-                          <li><label><input type="checkbox" checked disabled value="1 Paquete Nesquik (220gr)">1 Paquete Nesquik (220gr)</label></li>
+                          <li><label><input type="checkbox" checked disabled value="1 Nesquik (220gr)">1 Paquete Nesquik (220gr)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Lata de atún Isabel en aceite (142gr)">1 Lata de atún Isabel en aceite (142gr)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Paquete harina pan - arepas (1kg)">1 Paquete harina pan - arepas (1kg)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Paquete Pastas la Muñeca (250gr)">1 Paquete Pastas la Muñeca (250gr)</label></li>
@@ -151,7 +149,7 @@
                           <li><label><input type="checkbox" checked disabled value="1 Paquete de chorizo artesano">1 Paquete de chorizo artesano</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Lata atún vancamps">1 Lata atún vancamps</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Pollo campesino">1 Pollo campesino</label></li>
-                          <li><label><input type="checkbox" checked disabled value="1 Paquete de arepas (6 uds)">1 Paquete de arepas (6 uds)</label></li>
+                          <li><label><input type="checkbox" checked disabled value="1 Paquete arepas de queso (6 uds)">1 Paquete de arepas (6 uds)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Paquete de arepas de chocolo (5 uds)">1 Paquete de arepas de chocolo (5 uds)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Paquete de salchicha parrilla">1 Paquete de salchicha parrilla</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Paquete de jamón sandwich">1 Paquete de jamón sandwich</label></li>
@@ -174,7 +172,7 @@
                           <li><label><input type="checkbox" checked disabled value="1 Leche en polvo El Rodeo (200gr)">1 Leche en polvo El Rodeo (200gr)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Paquete caldo Maggi (8 uds)">1 Paquete caldo Maggi (8 uds)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Botella aceite Z (900ml)">1 Botella aceite Z (900ml)</label></li>
-                          <li><label><input type="checkbox" checked disabled value="1 Paquete Nesquik (220gr)">1 Paquete Nesquik (220gr)</label></li>
+                          <li><label><input type="checkbox" checked disabled value="1 Nesquik (220gr)">1 Paquete Nesquik (220gr)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Lata de atún Isabel en aceite (142gr)">1 Lata de atún Isabel en aceite (142gr)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Paquete harina pan - arepas (1kg)">1 Paquete harina pan - arepas (1kg)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Paquete Pastas la Muñeca (250gr)">1 Paquete Pastas la Muñeca (250gr)</label></li>
@@ -191,7 +189,7 @@
                         <ul>
                           <li><label><input type="checkbox" checked disabled value="1 Panal de huevos AAA">1 Panal de huevos AAA</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Pollo campesino">1 Pollo campesino</label></li>
-                          <li><label><input type="checkbox" checked disabled value="1 Paquete de arepas (6 uds)">1 Paquete de arepas (6 uds)</label></li>
+                          <li><label><input type="checkbox" checked disabled value="1 Paquete arepas de queso (6 uds)">1 Paquete de arepas (6 uds)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Paquete de arepas de chocolo (5 uds)">1 Paquete de arepas de chocolo (5 uds)</label></li>
                           <li><label><input type="checkbox" checked disabled value="1 Libra de queso cuajada">1 Libra de queso cuajada</label></li>
                         </ul>
